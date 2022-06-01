@@ -6,6 +6,8 @@ import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Posts from "./components/posts/Posts";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   const currentUser = true;
@@ -17,7 +19,8 @@ function App() {
           <Homepage />
         </Route>
         <Route path="/posts">
-          <Homepage />
+          <Posts />
+          <Sidebar />
         </Route>
         <Route path="/register">
           {currentUser ? <Homepage /> : <Register />}
